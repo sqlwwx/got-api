@@ -1,7 +1,7 @@
 const got = require('got')
-const { decamelizeKeys } = require('xcase')
 const debug = require('debug')('@got-api/gitlab')
 const { Api, middleware } = require('@got-api/base')
+const decamelizeSearchParams = require('@got-api/base/init/decamelizeSearchParams')
 const { getApiInfo } = require('@got-api/base/utils')
 const path = require('path')
 const QueryBuilder = require('./QueryBuilder')
@@ -20,6 +20,7 @@ class Gitlab extends Api {
     super(options)
     const { ua, client } = getApiInfo(path.resolve(__dirname, '..'))
     const { endpoint = GITLAB_ENDPOINT, token = GITLAB_TOKEN } = options
+    debug(options, ua, client)
     this.got = got.extend({
       timeout: 3000,
       prefixUrl: endpoint,
@@ -30,13 +31,7 @@ class Gitlab extends Api {
       },
       hooks: {
         init: [
-          requestOptions => {
-            const { searchParams = {} } = requestOptions
-            Object.assign(requestOptions, {
-              searchParams: decamelizeKeys(searchParams)
-            })
-            debug(requestOptions)
-          }
+          decamelizeSearchParams
         ]
       },
       handlers: [
