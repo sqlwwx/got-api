@@ -1,6 +1,6 @@
 const EventEmitter = require('events')
-const QueryBuilder = require('./QueryBuilder')
 const got = require('got')
+const QueryBuilder = require('./QueryBuilder')
 
 class Api extends EventEmitter {
   constructor () {

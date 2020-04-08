@@ -17,9 +17,10 @@ module.exports = (options = {}) => {
       /* eslint-disable no-param-reassign */
       err.name = errorName
       if (body) {
-        err.message = typeof body === 'string'
+        const msg = typeof body === 'string'
           ? body
           : body.message || err.message
+        err.message = `${msg}, ${err.options.method} ${err.options.url.href}`
       }
       /* eslint-enable no-param-reassign */
       throw err

@@ -26,7 +26,7 @@ describe('Gitlab', () => {
       await assert.rejects(
         api.delete('TEST'), {
           name: 'GitlabError',
-          message: '404 GroupVariable Not Found'
+          message: '404 GroupVariable Not Found, DELETE https://gitlab.weidiango.com/api/v4/groups/weidian-lab%2Flab/variables/TEST'
         }
       )
       assert(
