@@ -1,0 +1,39 @@
+{
+  "name": "@got-api/base",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "release": "standard-version"
+  },
+  "author": "sqlwwx <wwx@wuweixing.com> (http://wiki.lab.wuweixing.com)",
+  "engines": {
+    "node": ">=12.13"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "got": "^10",
+    "xcase": "^2"
+  },
+  "devDependencies": {
+    "@babel/cli": "*",
+    "@babel/core": "*",
+    "@babel/plugin-proposal-class-properties": "*",
+    "@babel/plugin-proposal-decorators": "*",
+    "@babel/plugin-proposal-export-default-from": "*",
+    "@babel/plugin-proposal-export-namespace-from": "*",
+    "@babel/plugin-syntax-object-rest-spread": "*",
+    "@babel/preset-env": "*",
+    "@commitlint/cli": "*",
+    "@commitlint/config-conventional": "*",
+    "babel-jest": "*",
+    "babel-preset-power-assert": "*",
+    "eslint": "*",
+    "eslint-config-standard-airbnb-base": "*",
+    "eslint-friendly-formatter": "*",
+    "eslint-plugin-you-dont-need-lodash-underscore": "*",
+    "jest": "*",
+    "power-assert": "*",
+    "standard-version": "*"
+  }
+}
