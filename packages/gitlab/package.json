@@ -1,6 +1,6 @@
 {
   "name": "@got-api/gitlab",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "",
   "main": "lib/index.js",
   "scripts": {
@@ -19,7 +19,7 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@got-api/base": "*",
+    "@got-api/base": "^0.0.1",
     "debug": "^4",
     "got": "^10",
     "ini": "^1",
