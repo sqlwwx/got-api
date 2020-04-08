@@ -12,3 +12,4 @@ makefile
 babel.config.js
 /src/
 yarn-error.log
+coverage/

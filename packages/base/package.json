@@ -35,5 +35,6 @@
     "jest": "*",
     "power-assert": "*",
     "standard-version": "*"
-  }
+  },
+  "gitHead": "9100080238394e52da7b05fb0c959dcfb29d5034"
 }
