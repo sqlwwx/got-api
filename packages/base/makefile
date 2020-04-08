@@ -12,7 +12,7 @@ build:
 	NODE_ENV=production $(BABEL) src -d . --copy-files
 
 watch:
-	$(BABEL) -w src -d lib --copy-files
+	$(BABEL) -w src -d . --copy-files
 
 lint:
 	$(LINT) --format $(FORMATTER) --fix src/*.js

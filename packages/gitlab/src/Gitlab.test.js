@@ -26,7 +26,19 @@ describe('Gitlab', () => {
       await assert.rejects(
         api.delete('TEST'), {
           name: 'GitlabError',
-          message: '404 GroupVariable Not Found, DELETE https://gitlab.weidiango.com/api/v4/groups/weidian-lab%2Flab/variables/TEST'
+          message: '404 GroupVariable Not Found'
+        }
+      )
+      await assert.rejects(
+        () => api.delete('TEST'),
+        err => {
+          assert(err.options)
+          assert(err.response)
+          assert(err.href)
+          assert(err.method)
+          assert(err.statusCode)
+          assert(err.body)
+          return true
         }
       )
       assert(
@@ -39,6 +51,15 @@ describe('Gitlab', () => {
         protected: false,
         masked: false
       }
+      await assert.rejects(
+        () => api.create({}),
+        err => {
+          assert(err.name, 'GitlabError')
+          assert(err.statusCode, 400)
+          assert(err.message, 'key is missing, value is missing')
+          return true
+        }
+      )
       const ret = await api.create(data)
       assert.deepEqual(ret, data)
       assert(

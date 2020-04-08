@@ -10,6 +10,7 @@ module.exports = (options = {}) => {
       if (body && typeof body === 'string') {
         try {
           body = JSON.parse(body)
+          err.response.body = body
         } catch (e) {
           debug(e, body)
         }
@@ -17,10 +18,9 @@ module.exports = (options = {}) => {
       /* eslint-disable no-param-reassign */
       err.name = errorName
       if (body) {
-        const msg = typeof body === 'string'
+        err.message = typeof body === 'string'
           ? body
-          : body.message || err.message
-        err.message = `${msg}, ${err.options.method} ${err.options.url.href}`
+          : body.message || body.error || err.message
       }
       /* eslint-enable no-param-reassign */
       throw err
