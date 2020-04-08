@@ -27,5 +27,6 @@
   },
   "devDependencies": {
     "standard-version": "*"
-  }
+  },
+  "gitHead": "a23253af5b84654696a0744849841cc037b40a82"
 }
