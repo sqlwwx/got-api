@@ -8,9 +8,10 @@ describe('Gitlab', () => {
       const gitlab = new Gitlab()
       const variables = await gitlab
         .query()
-        .group('weidian-lab/lab')
+        .group('weidian-lab')
         .variables()
-        .list(1, 100)
+        .list(1, 1)
+      assert(variables.length === 1)
       assert.deepEqual(
         Object.keys(variables[0]),
         'variableType,key,value,protected,masked'.split(',')

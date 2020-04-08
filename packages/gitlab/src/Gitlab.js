@@ -32,11 +32,10 @@ class Gitlab extends Api {
         init: [
           requestOptions => {
             const { searchParams = {} } = requestOptions
-            debug(searchParams)
-            return {
-              ...options,
+            Object.assign(requestOptions, {
               searchParams: decamelizeKeys(searchParams)
-            }
+            })
+            debug(requestOptions)
           }
         ]
       },
