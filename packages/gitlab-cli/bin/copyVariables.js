@@ -1,12 +1,12 @@
 #!/usr/bin/env node
 
 const { isEqual } = require('lodash')
-const Gitlab = require('.')
+const Gitlab = require('@got-api/gitlab')
 
 const copyEnvs = async (originGroup, distGroup) => {
   const gitlab = new Gitlab()
-  const originVariableApi = gitlab.key('wwx').group(originGroup).variables()
-  const distVariableApi = gitlab.key('wwx').group(distGroup).variables()
+  const originVariableApi = gitlab.group(originGroup).variables()
+  const distVariableApi = gitlab.group(distGroup).variables()
 
   const originVariables = (await originVariableApi.list()).reduce((obj, item) => ({ ...obj, [item.key]: item }), {})
   const distVariables = (await distVariableApi.list()).reduce((obj, item) => ({ ...obj, [item.key]: item }), {})

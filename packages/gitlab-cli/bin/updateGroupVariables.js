@@ -3,7 +3,7 @@
 const fs = require('fs')
 const ini = require('ini')
 const { isEqual } = require('lodash')
-const Gitlab = require('..')
+const Gitlab = require('@got-api/gitlab')
 
 const readIni = filePath => ini.parse(fs.readFileSync(filePath, 'utf-8'))
 

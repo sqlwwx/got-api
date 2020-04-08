@@ -4,7 +4,7 @@
 
 const assert = require('assert')
 
-const Gitlab = require('..')
+const Gitlab = require('@got-api/gitlab')
 
 const copyEnvs = async project => {
   const gitlab = new Gitlab()

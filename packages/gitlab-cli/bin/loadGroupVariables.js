@@ -3,7 +3,7 @@
 const ini = require('ini')
 const assert = require('assert')
 
-const Gitlab = require('..')
+const Gitlab = require('@got-api/gitlab')
 
 /* eslint-disable no-console */
 const copyEnvs = async group => {

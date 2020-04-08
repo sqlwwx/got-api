@@ -1,0 +1,31 @@
+{
+  "name": "@got-api/gitlab-cli",
+  "version": "0.0.1",
+  "description": "",
+  "scripts": {
+    "release": "standard-version"
+  },
+  "bin": {
+    "updateGitlabVariables": "bin/updateVariables.js",
+    "loadGitlabProjectVariables": "bin/loadProjectVariables.js",
+    "copyGitlabVariables": "bin/copyVariables.js",
+    "loadGitlabGroupVariables": "bin/loadGroupVariables.js",
+    "updateGitlabGroupVariables": "bin/updateGroupVariables.js"
+  },
+  "author": "sqlwwx <wwx@wuweixing.com> (http://wiki.lab.wuweixing.com)",
+  "engines": {
+    "node": ">=12.13"
+  },
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "@got-api/gitlab": "*",
+    "ini": "^1",
+    "lodash": "^4"
+  },
+  "devDependencies": {
+    "standard-version": "*"
+  }
+}
