@@ -11,7 +11,8 @@ const readIni = filePath => ini.parse(fs.readFileSync(filePath, 'utf-8'))
 const setShouldDelete = items => {
   items.filter(item => item.isExisted && !item.shouldDelete).forEach(item => {
     Object.defineProperties(item, {
-      shouldDelete: { value: true, enumerable: false }
+      shouldDelete: { value: true, enumerable: false },
+      shouldCreate: { value: true, enumerable: false }
     })
   })
 }
