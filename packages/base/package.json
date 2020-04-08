@@ -11,6 +11,9 @@
     "node": ">=12.13"
   },
   "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
   "dependencies": {
     "got": "^10",
     "xcase": "^2"
