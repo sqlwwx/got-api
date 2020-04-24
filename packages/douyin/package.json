@@ -1,0 +1,45 @@
+{
+  "name": "@got-api/douyin",
+  "version": "0.0.3",
+  "description": "",
+  "main": "lib/index.js",
+  "scripts": {
+    "release": "standard-version"
+  },
+  "author": "sqlwwx <wwx@wuweixing.com> (http://wiki.lab.wuweixing.com)",
+  "engines": {
+    "node": ">=12.13"
+  },
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "@got-api/base": "^0.1.0",
+    "debug": "^4",
+    "got": "^11.0.2",
+    "ini": "^1",
+    "xcase": "^2"
+  },
+  "devDependencies": {
+    "@babel/cli": "*",
+    "@babel/core": "*",
+    "@babel/plugin-proposal-class-properties": "*",
+    "@babel/plugin-proposal-decorators": "*",
+    "@babel/plugin-proposal-export-default-from": "*",
+    "@babel/plugin-proposal-export-namespace-from": "*",
+    "@babel/plugin-syntax-object-rest-spread": "*",
+    "@babel/preset-env": "*",
+    "@commitlint/cli": "*",
+    "@commitlint/config-conventional": "*",
+    "babel-jest": "25.4.0",
+    "babel-preset-power-assert": "*",
+    "eslint": "*",
+    "eslint-config-standard-airbnb-base": "*",
+    "eslint-friendly-formatter": "*",
+    "eslint-plugin-you-dont-need-lodash-underscore": "*",
+    "jest": "25.4.0",
+    "power-assert": "*",
+    "standard-version": "*"
+  }
+}
