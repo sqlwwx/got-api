@@ -4,6 +4,7 @@
   "description": "",
   "main": "lib/index.js",
   "scripts": {
+    "build": "make build",
     "release": "standard-version"
   },
   "author": "sqlwwx <wwx@wuweixing.com> (http://wiki.lab.wuweixing.com)",

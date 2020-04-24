@@ -4,14 +4,8 @@
   "description": "",
   "main": "lib/index.js",
   "scripts": {
+    "build": "make build",
     "release": "standard-version"
-  },
-  "bin": {
-    "updateGitlabVariables": "lib/bin/updateVariables.js",
-    "loadGitlabProjectVariables": "lib/bin/loadProjectVariables.js",
-    "copyGitlabVariables": "lib/bin/copyVariables.js",
-    "loadGitlabGroupVariables": "lib/bin/loadGroupVariables.js",
-    "updateGitlabGroupVariables": "lib/bin/updateGroupVariables.js"
   },
   "author": "sqlwwx <wwx@wuweixing.com> (http://wiki.lab.wuweixing.com)",
   "engines": {
