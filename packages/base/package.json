@@ -16,7 +16,7 @@
   },
   "dependencies": {
     "debug": "^4.1.1",
-    "got": "^10",
+    "got": "^11.0.2",
     "xcase": "^2"
   },
   "devDependencies": {
@@ -30,13 +30,13 @@
     "@babel/preset-env": "*",
     "@commitlint/cli": "*",
     "@commitlint/config-conventional": "*",
-    "babel-jest": "*",
+    "babel-jest": "25.4.0",
     "babel-preset-power-assert": "*",
     "eslint": "*",
     "eslint-config-standard-airbnb-base": "*",
     "eslint-friendly-formatter": "*",
     "eslint-plugin-you-dont-need-lodash-underscore": "*",
-    "jest": "*",
+    "jest": "25.4.0",
     "power-assert": "*",
     "standard-version": "*"
   },
